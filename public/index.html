@@ -7,25 +7,28 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Materialize -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="styles.css">
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <!-- Material Design Fonts from Google -->
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+
     <title>E-Scraper | Your Scraper of Choice</title>
 </head>
 
 <body>
     <div class="container">
         <header class="col s12">
-            <h1 class="center-align">E-Scraper!</h1>
+            <h1 class="center-align" id="titleText">E-Scraper!</h1>
         </header>
         <div class="instructions">
             <h5 class="instructionText">
 
             </h5>
         </div>
-        <div class="scrapeButton col s12">
-            <button class="scrape center-align">Scrape!</button>
+        <div class="scrapeButton col s12 center-align">
+            <button class="waves-effect waves-light btn-large red" id="scrape">Scrape!</button>
         </div>
         <div class="scrapeResults">
             <div class="card-panel hoverable">
