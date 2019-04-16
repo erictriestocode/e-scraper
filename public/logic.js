@@ -1,8 +1,9 @@
 const axios = require("axios");
 const cheerio = require("cheerio");
 
+const newsURL = "http://lite.cnn.io/en"
 
-axios.get("https://old.reddit.com/r/webdev").then(function(response) {
+axios.get(newsURL).then(function (response) {
 
   // Load the Response into cheerio and save it to a variable
   // '$' becomes a shorthand for cheerio's selector commands, much like jQuery's '$'
@@ -13,7 +14,7 @@ axios.get("https://old.reddit.com/r/webdev").then(function(response) {
 
   // With cheerio, find each p-tag with the "title" class
   // (i: iterator. element: the current element)
-  $("p.title").each(function(i, element) {
+  $("li").each(function (i, element) {
 
     // Save the text of the element in a "title" variable
     var title = $(element).text();
@@ -25,10 +26,12 @@ axios.get("https://old.reddit.com/r/webdev").then(function(response) {
     // Save these results in an object that we'll push into the results array we defined earlier
     results.push({
       title: title,
-      link: link
+      link: newsURL + link
     });
   });
 
   // Log the results once you've looped through each of the elements found with cheerio
+
   console.log(results);
+
 });
