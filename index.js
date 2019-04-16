@@ -2,7 +2,7 @@
 
 //Main requirements for express and mongo
 const express = require("express");
-const mongojs - require("mongojs");
+const mongojs = require("mongojs");
 
 const app = express();
 
@@ -18,6 +18,11 @@ db.on("error", function(error) {
   console.log("Database Error:", error);
 });
 
+// Main Route
+// sending "server is working" to the DOM as a test
+app.get("/", function(req,res){
+  res.send("Server is Working!");
+});
 
 
 // Express Start on port 3000
