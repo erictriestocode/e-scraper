@@ -18,23 +18,14 @@ app.use(express.static("public"));
 // Using MongoDB Atlas free hosting to try and avoid a lot of problems with Heroku, plus play to the home team and host on GCP
 mongoose.connect("mongodb+srv://appuser:appuser@cluster0-8odn4.gcp.mongodb.net/test?retryWrites=true", { useNewUrlParser: true});
 console.log(mongoose.connection.readyState);
-// ***** DEPRECATED *****
-// variable setup
-// let databaseUrl = "news";
-// let collections = ["articles"];
-// let db = mongojs(databaseUrl, collections);
-// // Check for errors
-// db.on("error", function(error) {
-//   console.log("Database Error:", error);
-// });
-// ***** /DEPRECATED *****
+
 
 
 // Main Route
 // sending "server is working" to the DOM as a test
-// app.get("/", function(req,res){
-//   res.send("Server is Working!");
-// });
+app.get("/", function(req,res){
+  res.send("Server is Working!");
+});
 
 
 // Express Start on port 3000
