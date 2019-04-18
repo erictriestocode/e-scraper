@@ -27,9 +27,11 @@
 
             </h5>
         </div>
-        <div class="scrapeButton col s12 center-align">
-            <button class="waves-effect waves-light btn-large red" id="scrape">Scrape!</button>
-        </div>
+        <form action="/scrape" method="get">
+            <div class="scrapeButton col s12 center-align">
+                <button class="waves-effect waves-light btn-large red" id="scrape" type="submit">Scrape!</button>
+            </div>
+        </form>
         <div class="scrapeResults">
             <div class="card-panel hoverable">
                 <h5>Article 1!</h5>
