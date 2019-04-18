@@ -15,6 +15,7 @@ app.use(express.static("public"));
 // DATABASE SETUP
 // Using MongoDB Atlas free hosting to try and avoid a lot of problems with Heroku, plus play to the home team and host on GCP
 mongoose.connect("mongodb+srv://appuser:appuser@cluster0-8odn4.gcp.mongodb.net/test?retryWrites=true", { useNewUrlParser: true});
+console.log(mongoose.connection.readyState);
 // ***** DEPRECATED *****
 // variable setup
 // let databaseUrl = "news";
