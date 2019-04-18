@@ -1,19 +1,21 @@
 // MAIN SERVER FILE
 
-//Main requirements for express and mongo
+//Main requirements for express, mongo, mongoose(some others probably do not need to be added)
 const express = require("express");
 const mongojs = require("mongojs");
 const cheerio = require("cheerio");
 const axios = require("axios");
 const hbs = require("express-handlebars");
 const mongoose = require("mongoose");
-
+// Initialize Express
 const app = express();
 
 app.use(express.static("public"));
 
 // DATABASE SETUP
+// Using MongoDB Atlas free hosting to try and avoid a lot of problems with Heroku, plus play to the home team and host on GCP
 mongoose.connect("mongodb+srv://appuser:appuser@cluster0-8odn4.gcp.mongodb.net/test?retryWrites=true", { useNewUrlParser: true});
+// ***** DEPRECATED *****
 // variable setup
 // let databaseUrl = "news";
 // let collections = ["articles"];
@@ -22,6 +24,8 @@ mongoose.connect("mongodb+srv://appuser:appuser@cluster0-8odn4.gcp.mongodb.net/t
 // db.on("error", function(error) {
 //   console.log("Database Error:", error);
 // });
+// ***** /DEPRECATED *****
+
 
 // Main Route
 // sending "server is working" to the DOM as a test
