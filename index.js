@@ -60,7 +60,8 @@ app.get("/scrape", function (req, res) {
       });
     })
     console.log(newsURL);
-    console.log(response.data)
+    // console.log(response.data)
+    console.log(results);
 
   });
 });
