@@ -9,6 +9,8 @@ const hbs = require("express-handlebars");
 const mongoose = require("mongoose");
 // Initialize Express
 const app = express();
+// Port for Heroku
+const PORT = process.env.PORT || 3000;
 
 app.use(express.static("public"));
 
@@ -36,6 +38,6 @@ console.log(mongoose.connection.readyState);
 
 
 // Express Start on port 3000
-app.listen(3000, function() {
-  console.log("App running on port 3000!");
+app.listen(PORT, function() {
+  console.log("App running on port: " + PORT);
 });
