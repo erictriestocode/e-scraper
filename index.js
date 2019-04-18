@@ -30,9 +30,9 @@ console.log(mongoose.connection.readyState);
 
 // Main Route
 // sending "server is working" to the DOM as a test
-app.get("/", function(req,res){
-  res.send("Server is Working!");
-});
+// app.get("/", function(req,res){
+//   res.send("Server is Working!");
+// });
 
 
 // Express Start on port 3000
